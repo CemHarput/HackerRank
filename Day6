@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	char S[100];
+	int n;
+	int i=0;
+	scanf("%d", &n);
+    for (int i = 1; i < n; i++)
+	{
+		scanf("%s\n", S);
+	}
+
+	while (S[i] != '\0')
+	{
+		if (i % 2 == 0)
+		{
+			printf("%c", S[i]);
+		}
+      
+		i++;
+      
+	}
+	
+
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		return 0;
+}
