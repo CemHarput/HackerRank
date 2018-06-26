@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define SIZE 1000
+int main(void) {
+
+	char string[SIZE];
+    char s[2]=" ";
+	char *token;
+	scanf("%[^\n]", string);
+    token=strtok(string,s);
+    
+    while(token!=NULL)
+    {
+        printf("%s\n",token);
+        token=strtok(NULL,s);
+    }
+
+	
+	
+	
+	
+
+	
+	//Write your logic to print the tokens of the sentence here.
+	return 0;
+}
