@@ -18,8 +18,8 @@ enum record_status{
     EMPTY,DELETED,OCCUPIED
 };
 typedef struct{
-    int count;
     char word[SIZE];
+    enum record_status status;
 }hash_t;
 int hashfunc(int key)
 {
@@ -27,6 +27,16 @@ int hashfunc(int key)
 }
 void insert(hash_t table, char *word)
 {
+    int count,temp,key;
+    key=word;
+    temp=hashfunc(key);
+    for(count=1;count!=SIZE-1;count++)
+    {
+        if(hash_t[pos].status==EMPTY || hash_t[pos].status==DELETED)
+        {
+            
+        }
+    }
     
 }    
 
@@ -43,6 +53,7 @@ int search(hash_t param, char *string)
         return pos;
         pos=(temp+count)%SIZE;
     }
+    return -1;
 }
 
 void delete(hash_t param, int i)
